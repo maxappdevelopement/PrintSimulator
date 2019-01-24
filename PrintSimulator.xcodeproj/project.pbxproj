@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2A820E21F4EFE90040D2BD /* EpsonExpressionXP.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A820D21F4EFE90040D2BD /* EpsonExpressionXP.m */; };
+		DD2A821121F4F1F40040D2BD /* CompaqIJ.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A821021F4F1F40040D2BD /* CompaqIJ.m */; };
+		DD2A827621F775800040D2BD /* QualityEnhancerDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A827521F775800040D2BD /* QualityEnhancerDevice.m */; };
 		DD4D114821F26A9F0041C183 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D114721F26A9F0041C183 /* AppDelegate.m */; };
 		DD4D114B21F26A9F0041C183 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D114A21F26A9F0041C183 /* ViewController.m */; };
 		DD4D114E21F26A9F0041C183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4D114C21F26A9F0041C183 /* Main.storyboard */; };
 		DD4D115021F26AA10041C183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4D114F21F26AA10041C183 /* Assets.xcassets */; };
 		DD4D115321F26AA10041C183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4D115121F26AA10041C183 /* LaunchScreen.storyboard */; };
 		DD4D115621F26AA10041C183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D115521F26AA10041C183 /* main.m */; };
+		DD4D115E21F26B330041C183 /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D115D21F26B330041C183 /* Printer.m */; };
+		DD4D116421F274490041C183 /* HPpageWidePro.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D116321F274490041C183 /* HPpageWidePro.m */; };
+		DD4D116721F274700041C183 /* CanonPixma.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D116621F2746F0041C183 /* CanonPixma.m */; };
+		DD4D116A21F28BB30041C183 /* CurrencyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D116921F28BB30041C183 /* CurrencyConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD2A820C21F4EFE90040D2BD /* EpsonExpressionXP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EpsonExpressionXP.h; sourceTree = "<group>"; };
+		DD2A820D21F4EFE90040D2BD /* EpsonExpressionXP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EpsonExpressionXP.m; sourceTree = "<group>"; };
+		DD2A820F21F4F1F40040D2BD /* CompaqIJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompaqIJ.h; sourceTree = "<group>"; };
+		DD2A821021F4F1F40040D2BD /* CompaqIJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompaqIJ.m; sourceTree = "<group>"; };
+		DD2A827421F775800040D2BD /* QualityEnhancerDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QualityEnhancerDevice.h; sourceTree = "<group>"; };
+		DD2A827521F775800040D2BD /* QualityEnhancerDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QualityEnhancerDevice.m; sourceTree = "<group>"; };
 		DD4D114321F26A9F0041C183 /* PrintSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4D114621F26A9F0041C183 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD4D114721F26A9F0041C183 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +39,14 @@
 		DD4D115221F26AA10041C183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD4D115421F26AA10041C183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD4D115521F26AA10041C183 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4D115C21F26B330041C183 /* Printer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Printer.h; sourceTree = "<group>"; };
+		DD4D115D21F26B330041C183 /* Printer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Printer.m; sourceTree = "<group>"; };
+		DD4D116221F274490041C183 /* HPpageWidePro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPpageWidePro.h; sourceTree = "<group>"; };
+		DD4D116321F274490041C183 /* HPpageWidePro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPpageWidePro.m; sourceTree = "<group>"; };
+		DD4D116521F2746F0041C183 /* CanonPixma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanonPixma.h; sourceTree = "<group>"; };
+		DD4D116621F2746F0041C183 /* CanonPixma.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanonPixma.m; sourceTree = "<group>"; };
+		DD4D116821F28BB30041C183 /* CurrencyConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrencyConverter.h; sourceTree = "<group>"; };
+		DD4D116921F28BB30041C183 /* CurrencyConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				DD4D114621F26A9F0041C183 /* AppDelegate.h */,
+				DD4D116521F2746F0041C183 /* CanonPixma.h */,
+				DD4D116621F2746F0041C183 /* CanonPixma.m */,
 				DD4D114721F26A9F0041C183 /* AppDelegate.m */,
 				DD4D114921F26A9F0041C183 /* ViewController.h */,
 				DD4D114A21F26A9F0041C183 /* ViewController.m */,
@@ -67,6 +90,18 @@
 				DD4D115121F26AA10041C183 /* LaunchScreen.storyboard */,
 				DD4D115421F26AA10041C183 /* Info.plist */,
 				DD4D115521F26AA10041C183 /* main.m */,
+				DD4D115C21F26B330041C183 /* Printer.h */,
+				DD4D115D21F26B330041C183 /* Printer.m */,
+				DD4D116221F274490041C183 /* HPpageWidePro.h */,
+				DD4D116321F274490041C183 /* HPpageWidePro.m */,
+				DD4D116821F28BB30041C183 /* CurrencyConverter.h */,
+				DD4D116921F28BB30041C183 /* CurrencyConverter.m */,
+				DD2A820C21F4EFE90040D2BD /* EpsonExpressionXP.h */,
+				DD2A820D21F4EFE90040D2BD /* EpsonExpressionXP.m */,
+				DD2A820F21F4F1F40040D2BD /* CompaqIJ.h */,
+				DD2A821021F4F1F40040D2BD /* CompaqIJ.m */,
+				DD2A827421F775800040D2BD /* QualityEnhancerDevice.h */,
+				DD2A827521F775800040D2BD /* QualityEnhancerDevice.m */,
 			);
 			path = PrintSimulator;
 			sourceTree = "<group>";
@@ -141,7 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4D115E21F26B330041C183 /* Printer.m in Sources */,
+				DD4D116A21F28BB30041C183 /* CurrencyConverter.m in Sources */,
 				DD4D114B21F26A9F0041C183 /* ViewController.m in Sources */,
+				DD2A820E21F4EFE90040D2BD /* EpsonExpressionXP.m in Sources */,
+				DD2A821121F4F1F40040D2BD /* CompaqIJ.m in Sources */,
+				DD2A827621F775800040D2BD /* QualityEnhancerDevice.m in Sources */,
+				DD4D116421F274490041C183 /* HPpageWidePro.m in Sources */,
+				DD4D116721F274700041C183 /* CanonPixma.m in Sources */,
 				DD4D115621F26AA10041C183 /* main.m in Sources */,
 				DD4D114821F26A9F0041C183 /* AppDelegate.m in Sources */,
 			);

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,153 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fg-Gm-NJI">
+                                <rect key="frame" x="14" y="49" width="384" height="227"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-AY-4ye">
+                                <rect key="frame" x="270" y="398" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Im5-Oi-dZ6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter number of pages to print: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="uXU-Mm-uHR">
+                                <rect key="frame" x="14" y="398" width="248" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dhP-oP-ZQz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-cV-gOy">
+                                <rect key="frame" x="14" y="322" width="384" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yL1-00-hAo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Mono"/>
+                                    <segment title="Color"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentActionMonoColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="KSX-Rn-rHo"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nCX-Am-9cw">
+                                <rect key="frame" x="14" y="284" width="384" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FmZ-7l-EKA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Simplex"/>
+                                    <segment title="Duplex"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentActionSimplexDuplex:" destination="BYZ-38-t0r" eventType="valueChanged" id="cz6-dN-TOx"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us4-wd-UlM">
+                                <rect key="frame" x="14" y="671" width="384" height="45"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.41568627450980389" blue="1" alpha="0.74082298801369861" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FbB-ce-c0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonActionCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2s-gn-MlW"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SEn-CK-bXb">
+                                <rect key="frame" x="14" y="360" width="384" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bph-N1-EnK"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="USD"/>
+                                    <segment title="EUR"/>
+                                    <segment title="SEK"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentActionCurrency:" destination="BYZ-38-t0r" eventType="valueChanged" id="fx3-UA-nhS"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwQ-ls-fiw">
+                                <rect key="frame" x="14" y="436" width="384" height="227"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Print Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-rb-G0X">
+                                <rect key="frame" x="14" y="20" width="384" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uXU-Mm-uHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="1gF-6a-o7M"/>
+                            <constraint firstItem="IbB-rb-G0X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="5p7-sL-rKr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="us4-wd-UlM" secondAttribute="trailing" constant="16" id="9aV-9J-FZr"/>
+                            <constraint firstItem="iYz-AY-4ye" firstAttribute="width" secondItem="SEn-CK-bXb" secondAttribute="width" multiplier="1/3" id="BBw-BX-pRC"/>
+                            <constraint firstItem="x1e-cV-gOy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="Cvk-8Q-z3u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbB-rb-G0X" secondAttribute="trailing" constant="16" id="FcP-In-ct4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEn-CK-bXb" secondAttribute="trailing" constant="16" id="Fd1-HL-fGB"/>
+                            <constraint firstItem="SEn-CK-bXb" firstAttribute="top" secondItem="x1e-cV-gOy" secondAttribute="bottom" constant="8" id="GPa-Mc-xsZ"/>
+                            <constraint firstItem="nCX-Am-9cw" firstAttribute="top" secondItem="2fg-Gm-NJI" secondAttribute="bottom" constant="8" id="H0b-4Q-O3p"/>
+                            <constraint firstItem="YwQ-ls-fiw" firstAttribute="top" secondItem="uXU-Mm-uHR" secondAttribute="bottom" constant="8" id="L2B-Ku-ER0"/>
+                            <constraint firstItem="YwQ-ls-fiw" firstAttribute="top" secondItem="iYz-AY-4ye" secondAttribute="bottom" constant="8" id="LuP-2F-Wyz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fg-Gm-NJI" secondAttribute="trailing" constant="16" id="Lz8-WR-3uc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nCX-Am-9cw" secondAttribute="trailing" constant="16" id="OaN-tl-qpQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYz-AY-4ye" secondAttribute="trailing" constant="16" id="Pyk-js-bNa"/>
+                            <constraint firstItem="us4-wd-UlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="RCa-uO-jMn"/>
+                            <constraint firstItem="YwQ-ls-fiw" firstAttribute="height" secondItem="2fg-Gm-NJI" secondAttribute="height" id="TEh-3Q-nuS"/>
+                            <constraint firstItem="IbB-rb-G0X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uob-8g-5rX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="us4-wd-UlM" secondAttribute="bottom" constant="20" id="V08-rE-7h9"/>
+                            <constraint firstItem="iYz-AY-4ye" firstAttribute="leading" secondItem="uXU-Mm-uHR" secondAttribute="trailing" constant="8" id="bwH-h3-iJq"/>
+                            <constraint firstItem="2fg-Gm-NJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="eXQ-nc-htu"/>
+                            <constraint firstItem="us4-wd-UlM" firstAttribute="top" secondItem="YwQ-ls-fiw" secondAttribute="bottom" constant="8" id="iqN-bp-PsM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YwQ-ls-fiw" secondAttribute="trailing" constant="16" id="m0A-vc-YIh"/>
+                            <constraint firstItem="x1e-cV-gOy" firstAttribute="top" secondItem="nCX-Am-9cw" secondAttribute="bottom" constant="8" id="mPo-dG-tX1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x1e-cV-gOy" secondAttribute="trailing" constant="16" id="nDD-KB-sRZ"/>
+                            <constraint firstItem="YwQ-ls-fiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="nOL-Gz-u54"/>
+                            <constraint firstItem="uXU-Mm-uHR" firstAttribute="top" secondItem="SEn-CK-bXb" secondAttribute="bottom" constant="8" id="nvP-M4-R7r"/>
+                            <constraint firstItem="2fg-Gm-NJI" firstAttribute="top" secondItem="IbB-rb-G0X" secondAttribute="bottom" constant="8" id="rYH-fQ-Btb"/>
+                            <constraint firstItem="SEn-CK-bXb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="rah-j1-Lt9"/>
+                            <constraint firstItem="iYz-AY-4ye" firstAttribute="top" secondItem="SEn-CK-bXb" secondAttribute="bottom" constant="8" id="u6I-ZM-tTi"/>
+                            <constraint firstItem="nCX-Am-9cw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="vvd-jp-WBW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelChoosePrinter" destination="IbB-rb-G0X" id="a0c-MN-7FA"/>
+                        <outlet property="labelDisplayCalculate" destination="YwQ-ls-fiw" id="uLv-ns-36d"/>
+                        <outlet property="pagesInputTextField" destination="iYz-AY-4ye" id="3ah-hF-WNA"/>
+                        <outlet property="pickerView" destination="2fg-Gm-NJI" id="V4r-9X-A54"/>
+                        <outlet property="segmentControlCurrency" destination="SEn-CK-bXb" id="MDY-9h-mo9"/>
+                        <outlet property="segmentControlMonoColor" destination="x1e-cV-gOy" id="Kro-mg-a5b"/>
+                        <outlet property="segmentControlSimplexDuplex" destination="nCX-Am-9cw" id="hLS-dS-bCL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="96.195652173913047"/>
         </scene>
     </scenes>
 </document>
